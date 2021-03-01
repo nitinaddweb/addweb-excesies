@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>Ex-2</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <p id="hey"></p>
+    <p id="hi"></p>
+    <video width="100%" id="myvideo" height="500" controls>
+        <source id="vidsrc" src="" type="video/mp4">
+        <source id="vidsrc" src="" type="video/ogg">
+    </video>
+    <div>Country: <span id="country"></span>
+        <div>State: <span id="state"></span>
+            <div>City: <span id="city"></span>
+                <div>Latitude: <span id="latitude"></span>
+                    <div>Longitude: <span id="longitude"></span>
+                        <div>IP: <span id="IPv4"></span>
+                            <script type="text/javascript">
+                                var cheems = document.getElementById("myvideo");
+                                var res = localStorage.getItem("lastname");
+                                var vid = localStorage.getItem("newvideo");
+                                document.getElementById("hey").innerHTML = res;
+                                document.getElementById("hi").innerHTML = vid;
+                                document.getElementById("vidsrc").src = vid;
+                                document.getElementById("myvideo").load();
+                                
+                                $.ajax({
+                                    url: "https://geolocation-db.com/jsonp",
+                                    jsonpCallback: "callback",
+                                    dataType: "jsonp",
+                                    success: function (location) {
+                                        $('#country').html(location.country_name);
+                                        $('#state').html(location.state);
+                                        $('#city').html(location.city);
+                                        $('#latitude').html(location.latitude);
+                                        $('#longitude').html(location.longitude);
+                                        $('#ip').html(location.IPv4);
+                                    }
+                                });
+                            </script>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.933550485792!2d72.55376905046832!3d23.02621192189648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2zMjPCsDAxJzM0LjQiTiA3MsKwMzMnMjEuNSJF!5e0!3m2!1sen!2sin!4v1612253348607!5m2!1sen!2sin"
+                                width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""
+                                aria-hidden="false" tabindex="0"></iframe>
+
+</body>
+
+</html>

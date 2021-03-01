@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>Ex-1</title>
+
+</head>
+
+<body>
+    <form action="2.html" method="get">
+        <label name="name">Name</label>
+        <input type="text" id="uname" name="uname" placeholder="Enter Name"><br>
+
+        <label>path</label>
+        <input type="file" id="video" name="file"><br>
+        <input type="submit" onclick="pr()" value="submit" name="submit">
+        <input type="reset" value="refresh" name="refresh">
+    </form>
+    <p id="hey"></p>
+    <button id="show" onclick="getgeolocation()">Get Current Address</button>
+    <script>
+        var b = document.getElementById('hey');
+        function getgeolocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.watchPosition(showPosition);
+            }
+            else {
+                b.innerHTML = "browser does not support geolocation";
+            }
+        }
+
+        function showPosition(position) {
+            b.innerHTML = "Latitude:" + position.coords.latitude + "<br>longitude:" + position.coords.longitude;
+        }
+        function pr() {
+            var b = document.getElementById("uname").value;
+            var c = document.getElementById("video").files[0].name;
+            localStorage.setItem("lastname", b);
+            localStorage.setItem("newvideo", c);
+            //var result=localStorage.getItem("lastname");
+            //document.write(result);
+            //document.write(b);
+
+        }
+
+//document.getElementById('hey').innerHTML = b;
+    </script>
+
+</body>
+
+</html>

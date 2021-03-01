@@ -1,0 +1,239 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* font-family: "Times New Roman", Times, serif; */
+}
+
+
+/* //typeface */
+
+div .p11 {
+    font-weight: bold;
+    font-size: large;
+    font-family: "Times New Roman", Times, serif;
+}
+
+body {
+    /* font-family: Helvetica, sans-serif; */
+    font-family: "Times New Roman", Times, serif;
+}
+
+h1 {
+    color: blue;
+    font-family: verdana;
+    font-size: 300%;
+}
+
+p {
+    color: rgb(112, 101, 101);
+    font-family: courier;
+    font-size: 160%;
+}
+
+
+/* div {
+    width: 300px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+} */
+
+a:link {
+    color: #FF0000;
+}
+
+
+/* visited link */
+
+a:visited {
+    color: #8f1717;
+}
+
+
+/* mouse over link */
+
+a:hover {
+    color: #ff07ff;
+}
+
+
+/* selected link */
+
+a:active {
+    color: #0808cc;
+}
+
+div .col-lg-4 {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    animation: mymove 5s infinite;
+}
+
+
+/* //keyframes css */
+
+@keyframes mymove {
+    from {
+        top: 0px;
+    }
+    to {
+        top: 200px;
+    }
+}
+
+div .div21 {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+    0% {
+        top: 0px;
+        left: 0px;
+        background: red;
+    }
+    25% {
+        top: 0px;
+        left: 100px;
+        background: blue;
+    }
+    50% {
+        top: 100px;
+        left: 100px;
+        background: yellow;
+    }
+    75% {
+        top: 100px;
+        left: 0px;
+        background: green;
+    }
+    100% {
+        top: 0px;
+        left: 0px;
+        background: red;
+    }
+}
+
+p .p1,
+ul .am {
+    border: 2px solid rebeccapurple;
+    padding: .5em;
+}
+
+.block,
+li .li1 {
+    border: 2px solid blue;
+    padding: .5em;
+}
+
+ul,
+.am {
+    display: flex;
+    list-style: none;
+}
+
+.block {
+    display: block;
+}
+
+
+/* // variable css */
+
+body {
+    background-color: #c0cad4;
+}
+
+h2 {
+    border-bottom: 2px solid #1e90ff;
+}
+
+.container {
+    color: #1e90ff;
+    background-color: #ffffff;
+    padding: 15px;
+}
+
+button {
+    background-color: #ffffff;
+    color: #1e90ff;
+    border: 1px solid #1e90ff;
+    padding: 5px;
+}
+
+:root {
+    --blue: #1e90ff;
+    --white: #ffffff;
+}
+
+body {
+    background-color: var(--blue);
+}
+
+h2 {
+    border-bottom: 2px solid var(--blue);
+}
+
+.container {
+    color: var(--blue);
+    background-color: var(--white);
+    padding: 15px;
+}
+
+button {
+    background-color: var(--white);
+    color: var(--blue);
+    border: 1px solid var(--blue);
+    padding: 5px;
+}
+
+
+/* //box-sizing  */
+
+div .div1 {
+    width: 300px;
+    height: 100px;
+    border: 1px solid blue;
+}
+
+p .div2 {
+    width: 300px;
+    height: 100px;
+    padding: 50px;
+    border: 1px solid red;
+}
+
+
+/* Descendant Selector div ma bdha j <p> tag ne lai lese bhle div ma section tag b hase to a  b lai lese*/
+
+div p {
+    background-color: yellow;
+}
+
+
+/* Child Selector (>) ->div ni andar jetla b child avta hase a j lese.div ma section tag hase to nai le*/
+
+
+/* div>p {
+    background-color: rgb(2, 2, 2);
+} */
+
+
+/* Adjacent Sibling Selector (+) div pate aena p6i 1 j p le  */
+
+div+p {
+    background-color: rgb(0, 134, 151);
+}
+
+
+/* General Sibling Selector (~)  -> div p6i na bdha div <p> tag lai le*/
+
+
+/* div~p {
+    background-color: rgb(141, 141, 1);
+} */
